@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST["description"];
     $sets = intval($_POST["sets"]);
     $reps = intval($_POST["reps"]);
-    $status = intval($_POST["status"]);  // ✅ Get status from form
+    $status = intval($_POST["status"]);
 
     $query = "UPDATE fitness SET ExerciseName=?, description=?, sets=?, reps=?, status=? WHERE ExerciseID=?";
     $stmt = $conn->prepare($query);
